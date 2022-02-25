@@ -265,7 +265,7 @@ FROM
         RIGHT JOIN
     `g7 countries` ON `g7 countries`.country = latest_vax.country;
 /*19.Which country has the best vaccinations progress in G7 */
-/*CREATE DEFINER=`root`@`localhost` PROCEDURE `best_perform`()
+/*CREATE DEFINER=`root`@`localhost` PROCEDURE `best_vax_perform`()
 BEGIN
      SELECT `g7 countries`.country,MAX(number_vaccinated_per100),MAX(number_fully_vaccinated_per100)
      FROM `g7 countries` LEFT JOIN latest_vax
@@ -275,7 +275,7 @@ BEGIN
 END*/
 CALL best_vax_perform
 /*20.Which country has the smallest cases number and deaths number in G7*/
-/*CREATE DEFINER=`root`@`localhost` PROCEDURE `best_vax_perform`()
+/*CREATE DEFINER=`root`@`localhost` PROCEDURE `lowest_death_case_G7`()
 BEGIN
      SELECT `g7 countries`.country,MAX(number_vaccinated_per100) AS 'Smallest number of cases in G7',MAX(number_fully_vaccinated_per100)AS 'Smallest number of deaths in G7'
      FROM `g7 countries` LEFT JOIN latest_vax
