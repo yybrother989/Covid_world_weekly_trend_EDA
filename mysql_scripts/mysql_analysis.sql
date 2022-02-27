@@ -170,7 +170,7 @@ GROUP BY continent;
 /*##Dose the democracy index correlate to covid-19 cases and deaths in some degrees?*/
 
 SELECT 
-    country, case_last7d, death_last7d, eiu
+    country, case_last7d_per1m,  death_last7d_per1m, eiu
 FROM
     demo_index
         LEFT JOIN
@@ -184,7 +184,7 @@ LIMIT 20;
 /*14.Bottom 20 countries with lowest democracy index and their covid-19 cases and deaths*/
 
 SELECT 
-    country, case_last7d, death_last7d, eiu
+    country, case_last7d_per1m,  death_last7d_per1m, eiu
 FROM
     demo_index
         LEFT JOIN
