@@ -1,5 +1,5 @@
 /*##Covid weekly trend data insight retrieved from countries and continents*/
-
+/*#1.Showing the top 5 countries having the lesat death caused by covid in percent in the last 7 days*/
 CREATE VIEW top5_case_death_countries AS
     SELECT 
         country_other AS 'Country and other',
@@ -16,7 +16,7 @@ SELECT
     *
 FROM
     top5_case_death_countries;
-/*#2.Showing the top 5 countries having the lesat death caused by covid in percent in the last 7 days*/
+/*#2.Showing the bottom 5 countries having the lesat death caused by covid in percent in the last 7 days*/
 
 CREATE VIEW bottom5_case_death_countries AS
     SELECT 
